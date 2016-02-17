@@ -15,6 +15,13 @@ Platform: ARM Platform
 
 The current configuration is set to link with [libOpenCL.so](opencl/libOpenCL.so) from this device. 
 
+To run a test, use 
+
+```
+./intelgemm --kernel tn -s [matrix_size] --global-size [global_work_size] --local-size [local_work_size]  --validation
+```
+
+
 ## Peak
 
 The peak floating-point computation performance is benchmarked through [https://github.com/krrishnarraj/clpeak](https://github.com/krrishnarraj/clpeak).
