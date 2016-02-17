@@ -5,4 +5,4 @@ tags
 *.swp
 *.sqlite
 upload/
-build/
+intel-gemm/build/

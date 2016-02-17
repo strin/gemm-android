@@ -15,7 +15,7 @@ WD=`pwd`
 N_JOBS=${N_JOBS:-4}
 GEMM_ROOT=${WD}/intel-gemm
 BUILD_DIR=${GEMM_ROOT}/build
-ANDROID_LIB_ROOT=${WD}/android_lib
+ANDROID_LIB_ROOT=${WD}/
 OPENCV_ROOT=${ANDROID_LIB_ROOT}/opencv/sdk/native/jni
 OPENCL_ROOT=${ANDROID_LIB_ROOT}/opencl
 
