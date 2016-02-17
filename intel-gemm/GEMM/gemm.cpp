@@ -401,6 +401,7 @@ int main (int argc, const char** argv)
         // Form build options string from given parameters: macros definitions to pass into kernels
         string build_options =
             "-DT=" + cmdparser.arithmetic.getValue() +
+            // " -cl-nv-maxrregcount=4" +
             (cmdparser.arithmetic_double.isSet() ? " -DSAMPLE_NEEDS_DOUBLE" : "") +
             " -DTILE_SIZE_M=" + to_str(cmdparser.tile_size_M.getValue()) +
             " -DTILE_GROUP_M=" + to_str(cmdparser.tile_group_M.getValue()) +

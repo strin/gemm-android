@@ -32,6 +32,6 @@ cmake -DCMAKE_TOOLCHAIN_FILE="${WD}/android-cmake/android.toolchain.cmake" \
       -DOPENCL_INCLUDES=${OPENCL_ROOT} \
       ..
 
-make -j${N_JOBS}
+make -j${N_JOBS} VERBOSE=1
 
 cd "${WD}"

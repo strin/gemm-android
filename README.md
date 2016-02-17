@@ -85,6 +85,7 @@ One important thing to notice is the following constraints [1].
 
 ## Performance
 
+### Main Results
 | Size        | CL Kernel           | Throughput (GFlops) |
 | ------------- |:-------------:| -----:|
 | 1024 x 1024   | [noblock-v8](gemm-noblock-vload8.cl) | 11.14 |
@@ -93,6 +94,18 @@ One important thing to notice is the following constraints [1].
 | 2048 x 2048 | [blocking-2x2-v4](gemm-blocking-2x2-vload4.cl)     |  27.3 |
 | 4096 x 4096 | [noblock-v8](gemm-noblock-vload8.cl)  |   15.6  |
 | 4096 x 4096 | [blocking-2x2-v4](gemm-blocking-2x2-vload4.cl)  |  4.4  |
+
+### Other Results
+
+| Size        | CL Kernel           | Throughput (GFlops) |
+| ------------- |:-------------:| -----:|
+| 1024 x 1024 | [noblock-v16](gemm-noblock-vload16.cl) | 6.46 |
+| 1024 x 1024 | [noblock-v16-dotprod](gemm-noblock-vload16.cl) | 11.50 |
+| 2048 x 2048 | [noblock-v16](gemm-noblock-vload16.cl) | 6.09 |
+| 2048 x 2048 | [noblock-v16-dotprod](gemm-noblock-vload16.cl) | 15.10 |
+| 2048 x 2048 | [blocking-4x4-v8](gemm-blocking-4x4-vload8.cl) | 17.2 |
+| 2048 x 2048 | [blocking-4x4-v4](gemm-blocking-4x4-vload4.cl) | 10.6 |
+
 
 # GEMM Zoo
 

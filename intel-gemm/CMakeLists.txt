@@ -19,7 +19,6 @@ if(USE_libstdcpp)
   message("-- Warning: forcing libstdc++ (controlled by USE_libstdcpp option in cmake)")
 endif()
 
-
 message("opencl includes" ${OPENCL_INCLUDES})
 include_directories(${OPENCL_INCLUDES} "common")
 include_directories(${OPENCL_INCLUDES} "GEMM")
