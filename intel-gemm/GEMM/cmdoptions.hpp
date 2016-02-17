@@ -54,6 +54,9 @@ public:
 
     CmdOption<size_t> tile_size_K;
 
+    CmdOption<size_t> global_size;
+    CmdOption<size_t> local_size;
+
     CmdParserGEMM (int argc, const char** argv);
     virtual void parse ();
 

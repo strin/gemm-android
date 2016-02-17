@@ -88,6 +88,22 @@ CmdParserGEMM::CmdParserGEMM (int argc, const char** argv) :
         "Enables validation procedure on host (slow for big matrices).",
         false
     ),
+    global_size(
+        *this,
+        0,
+        "global-size",
+        "<integer>",
+        "global size parameter of OpenCL",
+        1024
+    ),
+    local_size(
+        *this,
+        0,
+        "local-size",
+        "<integer>",
+        "local size parameter of OpenCL",
+        16
+    ),
     tile_size_M(
         *this,
         0,

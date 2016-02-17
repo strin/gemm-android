@@ -222,13 +222,13 @@ void gemm (
     // -----------------------------------------------------------------------
 
     size_t global_size[2] = {
-        size / cmdparser.tile_size_M.getValue(),
-        size / cmdparser.tile_size_N.getValue()
+        cmdparser.global_size.getValue(),
+        cmdparser.global_size.getValue()
     };
 
     size_t local_size[2] = {
-        cmdparser.tile_group_M.getValue(),
-        cmdparser.tile_group_N.getValue()
+        cmdparser.local_size.getValue(),
+        cmdparser.local_size.getValue()
     };
 
 
