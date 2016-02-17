@@ -32,10 +32,16 @@ One important thing to notice is the following constraints [1].
 | 4096 x 4096 | [noblock-v8](gemm-noblock-vload8.cl)  |   15.6  |
 | 4096 x 4096 | [blocking-2x2-v4](gemm-blocking-2x2-vload4.cl)  |  4.4  |
 
+# GEMM Zoo
 
+Available implementations in literature for reference. None of these achieve good performance on our Android test device.
 
+* [Some GEMM implementation in clBLAS] (https://github.com/clMathLibraries/clBLAS/blob/master/src/library/blas/gens/clTemplates/sgemm_gcn_SmallMatrices.cl)
+* [NVidia Implementation Sample] (http://www.nvidia.com/content/cudazone/CUDABrowser/downloads/papers/NVIDIA_OpenCL_BestPracticesGuide.pdf)
+* [Intel GEMM Sample] (https://software.intel.com/sites/products/vcsource/files/GEMM.pdf)
+* [ViennalCL] (https://www.researchgate.net/publication/229430755_ViennaCL_-_A_High_Level_Linear_Algebra_Library_for_GPUs_and_Multi-Core_CPUs)
 
-
-# Useful Resources
+# Useful Links
 
 1. [Optimizing OpenCL Kernels for Mali-T600 GPUs](http://malideveloper.arm.com/downloads/GPU_Pro_5/GronqvistLokhmotov_white_paper.pdf)
+
