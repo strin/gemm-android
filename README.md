@@ -15,6 +15,61 @@ Platform: ARM Platform
 
 The current configuration is set to link with [libOpenCL.so](opencl/libOpenCL.so) from this device. 
 
+## Peak
+
+The peak floating-point computation performance is benchmarked through [https://github.com/krrishnarraj/clpeak](https://github.com/krrishnarraj/clpeak).
+
+```
+Platform: ARM Platform
+  Device: Mali-T760
+    Driver version  : 1.1 (Android)
+    Compute units   : 8
+    Clock frequency : 772 MHz
+    workgroups per compute unit : 2048
+    workgroup sizes : 256
+    max alloc size : 536870912
+
+    Global memory bandwidth (GBPS)
+      float   : 6.05
+      float2  : 10.51
+      float4  : 12.15
+      float8  : 12.17
+      float16 : 10.68
+
+    Single-precision compute (GFLOPS)
+globalWIs = 4194304
+      float   : 12.32
+      float2  : 32.25
+      float4  : 31.79
+      float8  : 45.37
+      float16 : 154.02
+
+    Double-precision compute (GFLOPS)
+      double   : 3.04
+      double2  : 30.11
+      double4  : 22.09
+      double8  : 35.68
+      double16 : 34.79
+
+    Integer compute (GIOPS)
+      int   : 5.13
+      int2  : 12.43
+      int4  : 11.99
+      int8  : 15.83
+      int16 : 72.55
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 4.69
+      enqueueReadBuffer          : 4.08
+      enqueueMapBuffer(for read) : 2536.00
+        memcpy from mapped ptr   : 4.36
+      enqueueUnmap(after write)  : 2382.92
+        memcpy to mapped ptr     : 4.41
+
+    Kernel launch latency : 1399.80 us
+   
+```
+
 ## Constraints
 
 One important thing to notice is the following constraints [1].
